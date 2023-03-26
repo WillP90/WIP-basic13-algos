@@ -96,3 +96,21 @@ function maxMinAve(arr){
     console.log("Average " + average + " , " + "Max " + max + " , " + "Min " + min)
 }
 maxMinAve([1, 3, 5, 7, 10])
+
+// #7 Swap String for Array Negative Values
+// Replace any negative value with 'Dojo'
+
+function swapString(arr){
+    var newArr = []
+    for(i=0; i< arr.length; i++){
+        if(arr[i] > 0){
+            newArr.push(arr[i])
+        }
+        if(arr[i] < 0){
+            newArr.push("Dojo")
+        }
+    }
+    console.log(arr + " becomes " + newArr);
+    
+}
+swapString([3, -5, 9, -3, 1])
