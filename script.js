@@ -114,3 +114,83 @@ function swapString(arr){
     
 }
 swapString([3, -5, 9, -3, 1])
+
+// #8 Print Odds 1-225
+// Print all odd integers from 1-255
+
+function printOdds2(){
+    for(i=1; i <= 255; i++){
+        if(i % 2 == 1){
+            console.log(i);
+        }
+    }
+}
+printOdds2()
+
+// #9 Iterate and Print Array
+// iterate through a given array, printing each value
+
+function iterArr(arr){
+    for(i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+}
+iterArr([1,5,8,10,3,-2])
+
+// #10 Get and Print Average
+// analyze an arrays values and print the average
+
+function arrAve(arr){
+    var sum = 0
+    for(i=0; i<arr.length; i++){
+        sum = sum + arr[i]
+    }
+    var average = sum / arr.length
+    console.log(average);
+}
+arrAve([1,5,3,8,15,2,4])
+
+// #11 Square the Values
+// square each value in a given array, returning that same array with changed values
+
+function squareArr(arr){
+    var newArr = []
+    for(i = 0; i < arr.length; i++){
+        var square = 0
+        square = arr[i] * arr[i]
+        newArr.push(square)
+    }
+    console.log(newArr);
+}
+
+squareArr([1, 4, 2, 3])
+
+// #12 Zero Out Negative Numbers
+// return the given array, after setting any negative values to 0
+
+function zeroOut(arr){
+    var newArr = []
+    for(i = 0; i < arr.length; i++){
+        if(arr[i] < 0){
+            newArr.push(0)
+        }
+        else{
+            newArr.push(arr[i])
+        }
+    }
+    console.log(newArr);
+}
+zeroOut([2, -3, 6, -5, 8])
+
+// #13 Shift Array Values
+// Given an array, move all values forward by one index, dropping the first and leaving a 0 value at the end
+
+function shifter(arr){
+    var newArr = []
+    for(i = 1; i < arr.length; i++){
+        newArr.push(arr[i])
+    }
+    newArr.push(0)
+    console.log(newArr);
+}
+shifter([1,3,5,1,9,2,4])
